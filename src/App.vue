@@ -1,7 +1,7 @@
 <!--
  * @Author: your name
  * @Date: 2020-07-01 21:46:39
- * @LastEditTime: 2020-07-23 18:41:25
+ * @LastEditTime: 2020-07-23 18:43:00
  * @LastEditors: Please set LastEditors
  * @Description: In User Settings Edit
  * @FilePath: \my-vuepro\src\App.vue
@@ -29,13 +29,13 @@
 </template>
 
 <script>
-import Item from './components/Item'
+// import Item from './components/Item'
 import index from './views/componentUpdate/index'
 
 export default {
   name: 'App',
   components: {
-    Item,
+    //Item,
     index
   },
   data() {
