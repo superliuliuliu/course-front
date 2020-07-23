@@ -1,13 +1,13 @@
 <!--
  * @Author: your name
  * @Date: 2020-07-01 21:46:39
- * @LastEditTime: 2020-07-23 18:33:12
+ * @LastEditTime: 2020-07-23 18:41:25
  * @LastEditors: Please set LastEditors
  * @Description: In User Settings Edit
  * @FilePath: \my-vuepro\src\App.vue
 --> 
 <template>
-  <div id="app">
+  <!-- <div id="app">
     {{msg}}
     <div>
         <input type="text" v-model="info">
@@ -16,13 +16,14 @@
     <div>
         <ul>
             <item v-for="item in list" :key="item">
-              <!--插槽-->
               <template v-slot:item="itemProps">
                 <span :style="{fontSize: '20px', color: itemProps.checked? 'blue': 'red'}">{{item}}</span>
               </template>
             </item>
         </ul>   
     </div>
+  </div> -->
+  <div>
     <index></index>
   </div>
 </template>
