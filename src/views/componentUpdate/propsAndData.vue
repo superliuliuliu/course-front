@@ -1,7 +1,7 @@
 <!--
  * @Author: your name
  * @Date: 2020-07-23 18:06:31
- * @LastEditTime: 2020-07-23 18:23:45
+ * @LastEditTime: 2020-07-23 18:48:35
  * @LastEditors: Please set LastEditors
  * @Description: 测试组件的属性和状态修改是否会触发组件的更新
  * @FilePath: \my-vuepro\src\views\componentUpdate\propsAndData.vue
@@ -35,12 +35,12 @@ export default {
       b: "world"
     };
   },
-  // 组件的钩子函数
+  // 组件的钩子函数  如果组件发生了更新则会触发
   updated() {
     console.log("触发了子组件PropsAndData的更新");
   },
   methods: {
-      // 按钮触发的方法
+      // 修改组件自身的状态
       handleBChange(){
           this.b = "vue" + Date.now();
           console.log("data.b 发生了变化，但是并没有触发组件更新", this.b);
