@@ -1,18 +1,55 @@
+<!--
+ * @Author: your name
+ * @Date: 2020-07-01 21:46:39
+ * @LastEditTime: 2020-07-23 18:33:12
+ * @LastEditors: Please set LastEditors
+ * @Description: In User Settings Edit
+ * @FilePath: \my-vuepro\src\App.vue
+--> 
 <template>
   <div id="app">
-    <img alt="Vue logo" src="./assets/logo.png">
-    <HelloWorld msg="Welcome to Your Vue.js App"/>
+    {{msg}}
+    <div>
+        <input type="text" v-model="info">
+        <button @click="handleClick">添加</button>
+    </div>
+    <div>
+        <ul>
+            <item v-for="item in list" :key="item">
+              <!--插槽-->
+              <template v-slot:item="itemProps">
+                <span :style="{fontSize: '20px', color: itemProps.checked? 'blue': 'red'}">{{item}}</span>
+              </template>
+            </item>
+        </ul>   
+    </div>
+    <index></index>
   </div>
 </template>
 
 <script>
-import HelloWorld from './components/HelloWorld.vue'
+import Item from './components/Item'
+import index from './views/componentUpdate/index'
 
 export default {
   name: 'App',
   components: {
-    HelloWorld
-  }
+    Item,
+    index
+  },
+  data() {
+    return {
+      msg:'hello Vue',
+      info:'',
+      list:[],
+    }
+  },
+  methods: {
+    handleClick(){
+      this.list.push(this.info)
+      this.info=''
+    }
+  },
 }
 </script>
 
