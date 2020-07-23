@@ -1,7 +1,7 @@
 <!--
  * @Author: your name
  * @Date: 2020-07-23 18:05:58
- * @LastEditTime: 2020-07-23 18:46:23
+ * @LastEditTime: 2020-07-23 18:53:47
  * @LastEditors: Please set LastEditors
  * @Description: 组件更新机制学习DEMO
  * @FilePath: \my-vuepro\src\views\componentUpdate\index.vue
@@ -9,9 +9,9 @@
 <template>
   <div>
     <p>
-      <button @click="handleNameChange">改变组件的name</button>
-      <button @click="handleInfoChange">改变组件的info</button>
-      <button @click="handleListChange">改变组件的list</button>
+      <button @click="handleNameChange">修改name</button>
+      <button @click="handleInfoChange">修改info</button>
+      <button @click="handleListChange">修改list</button>
     </p>
     <!--引入一个组件-->
     <PropsAndData :name="name" :info="info" :list="list"></PropsAndData>
