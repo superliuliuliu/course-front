@@ -1,7 +1,7 @@
 <!--
  * @Author: your name
  * @Date: 2020-07-23 18:05:58
- * @LastEditTime: 2020-07-23 18:53:47
+ * @LastEditTime: 2020-07-24 08:34:33
  * @LastEditors: Please set LastEditors
  * @Description: 组件更新机制学习DEMO
  * @FilePath: \my-vuepro\src\views\componentUpdate\index.vue
@@ -30,23 +30,24 @@ export default {
     handleNameChange() {
       // 改变状态name  进而触发子组件的属性修改
       this.name = "vue" + Date.now();
-      console.log("this.name 发生了变化，但是并没有触发子组件更新", this.name);
+      console.log("this.name 发生了变化", this.name);
     },
     handleInfoChange() {
       this.info.number = 1;
       // this.$set(this.info, 'number', 1)
-      console.log("this.info 发生了变化，但是并没有触发子组件更新", this.info);
+      console.log("this.info 发生了改变", this.info);
     },
     handleListChange() {
 			// 改变状态list 进而触发组件的属性修改
       this.list.push(1, 2, 3);
-      console.log("this.list 并没有发生变化，但是触发了子组件更新", this.list);
+      console.log("this.list 发生了改变", this.list);
     }
   },
   data() {
     // data代表自己的数据 这里使用自己的数据传递给子组件
-    this.name = name;
+    //this.name = name;
     return {
+      name: name,
       info: {},
       // info: {
       //   number: undefined
