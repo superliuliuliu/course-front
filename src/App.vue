@@ -1,7 +1,7 @@
 <!--
  * @Author: your name
  * @Date: 2020-07-01 21:46:39
- * @LastEditTime: 2020-07-23 18:43:00
+ * @LastEditTime: 2020-07-24 11:44:40
  * @LastEditors: Please set LastEditors
  * @Description: In User Settings Edit
  * @FilePath: \my-vuepro\src\App.vue
@@ -25,18 +25,22 @@
   </div> -->
   <div>
     <index></index>
+    <!--计算属性测试-->
+    <ComputedDemo></ComputedDemo>
   </div>
 </template>
 
 <script>
 // import Item from './components/Item'
 import index from './views/componentUpdate/index'
+import ComputedDemo from './views/computedAndWatch/ComputedDemo'
 
 export default {
   name: 'App',
   components: {
     //Item,
-    index
+    index,
+    ComputedDemo,
   },
   data() {
     return {
