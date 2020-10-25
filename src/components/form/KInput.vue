@@ -1,9 +1,9 @@
 <!--
  * @Author: your name
  * @Date: 2020-07-26 16:27:13
- * @LastEditTime: 2020-07-26 17:28:51
+ * @LastEditTime: 2020-07-27 14:05:31
  * @LastEditors: Please set LastEditors
- * @Description: In User Settings Edit
+ * @Description: 输入框组件
  * @FilePath: \my-vuepro\src\components\form\KInput.vue
 --> 
 <template>

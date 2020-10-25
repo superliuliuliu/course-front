@@ -1,9 +1,9 @@
 <!--
  * @Author: your name
  * @Date: 2020-07-26 17:14:38
- * @LastEditTime: 2020-07-26 18:01:04
+ * @LastEditTime: 2020-10-25 09:47:44
  * @LastEditors: Please set LastEditors
- * @Description: In User Settings Edit
+ * @Description: 表单组件 主要作用校验数据
  * @FilePath: \my-vuepro\src\components\form\KForm.vue
 --> 
 <template>

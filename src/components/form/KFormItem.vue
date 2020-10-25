@@ -1,9 +1,9 @@
 <!--
  * @Author: your name
  * @Date: 2020-07-26 17:03:06
- * @LastEditTime: 2020-07-26 17:57:05
+ * @LastEditTime: 2020-07-27 13:58:36
  * @LastEditors: Please set LastEditors
- * @Description: In User Settings Edit
+ * @Description: 携带label的输入框
  * @FilePath: \my-vuepro\src\components\form\KFromItem.vue
 --> 
 <template>
