@@ -1,29 +1,33 @@
 <!--
  * @Author: your name
  * @Date: 2020-07-01 21:46:39
- * @LastEditTime: 2020-10-26 09:07:01
+ * @LastEditTime: 2020-10-26 23:52:18
  * @LastEditors: Please set LastEditors
  * @Description: In User Settings Edit
  * @FilePath: \my-vuepro\src\App.vue
 --> 
 <template>
   <div>
-     <VBind author="liugaoyang"></VBind>
+     <!-- <VBind author="liugaoyang"></VBind>
      <Index></Index>
-     <KForm></KForm>
+     <KForm></KForm> -->
+     <KTree></KTree>
   </div>
 </template>
 
 <script>
-import VBind from './views/vbind'
-import Index from './components/communicate/index'
-import KForm from './components/form/index'
+// import VBind from './views/vbind';
+// import Index from './components/communicate/index';
+// import KForm from './components/form/index';
+import KTree from './components/tree/index';
+
 export default {
   name: 'App',
   components: {
-    VBind,
-    Index,
-    KForm
+    // VBind,
+    // Index,
+    // KForm,
+    KTree
   },
   data() {
     return{
