@@ -1,3 +1,11 @@
+<!--
+ * @Author: your name
+ * @Date: 2020-07-26 15:37:53
+ * @LastEditTime: 2020-10-26 07:37:25
+ * @LastEditors: Please set LastEditors
+ * @Description: In User Settings Edit
+ * @FilePath: \my-vuepro\src\components\communicate\index.vue
+-->
 <template>
   <div id="app">
     <h2>Parent</h2>
@@ -12,16 +20,18 @@ import Child1 from "@/components/communicate/Child1";
 import Child2 from "@/components/communicate/Child2";
 export default {
   name: "app",
+  // 父组件向下传递属性
   provide: {
     woniu: "我是骚气的Jerry老师"
   },
   data() {
     return {
       msg: "",
-      title1: "我是你爸爸"
+      title1: "通过props属性的形式实现父->子通信"
     };
   },
   methods: {
+    // 监听子组件事件
     getmsg(msg) {
       this.msg = msg;
     }

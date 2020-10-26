@@ -1,15 +1,18 @@
 <!--
  * @Author: your name
  * @Date: 2020-07-26 16:25:22
- * @LastEditTime: 2020-07-26 18:02:38
+ * @LastEditTime: 2020-10-26 16:03:40
  * @LastEditors: Please set LastEditors
- * @Description: In User Settings Edit
+ * @Description: 表单组件
  * @FilePath: \my-vuepro\src\components\form\index.vue
 --> 
 <template>
     <div>
+        <!--KForm上 model实现的是用户数据的双向绑定 rules实现的是规则的绑定与传递-->
         <KForm :model="model" :rules="rules" ref="logInForm">
+            <!--prop属性是用来区分KFormItem实例-->
             <KFormItem label="用户名" prop="username">
+                <!--v-model 实现自定义组件的双向绑定-->
                 <KInput v-model="model.username"></KInput>
             </KFormItem>
             <KFormItem label="密码" prop="password">
@@ -23,14 +26,17 @@
 </template>
 
 <script>
-import KInput from './KInput'
-import KFormItem from './KFormItem'
-import KForm from './KForm'
+import KInput from './KInput';
+import KFormItem from './KFormItem';
+import KForm from './KForm';
+import KNotice from '../notice/index';
+import create from '@/utils/create';
+
 export default {
     components:{
         KInput,
         KFormItem,
-        KForm
+        KForm,
     },
     data(){
         return {
@@ -46,13 +52,17 @@ export default {
     },
     methods:{
         onLogIn(){
+            // 创建对象实例
+            let notice;
             this.$refs.logInForm.validate((isValid)=>{
-                if (isValid){
-                    alert("成功")
-                }else{
-                    alert("存在错误")
-                }
-            })
+                notice = create(KNotice, {
+                    title: '测试组件',
+                    message: isValid? '成功': '请检查您输入的信息',
+                    duration: 3000
+                });
+                notice.show();    
+            });
+            // 提交数据到后端接口
         }
     }
 }
