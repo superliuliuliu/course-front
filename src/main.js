@@ -1,13 +1,15 @@
 /*
  * @Author: your name
  * @Date: 2020-07-01 21:46:39
- * @LastEditTime: 2020-10-26 14:30:21
+ * @LastEditTime: 2020-10-31 14:08:31
  * @LastEditors: Please set LastEditors
  * @Description: In User Settings Edit
  * @FilePath: \my-vuepro\src\main.js
  */
 import Vue from 'vue'
 import App from './App.vue'
+
+// 导入自定义riuter
 import router from './router'
 
 Vue.config.productionTip = false
