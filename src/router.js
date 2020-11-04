@@ -1,9 +1,9 @@
 /*
  * @Author: your name
  * @Date: 2020-10-27 00:07:17
- * @LastEditTime: 2020-10-30 09:46:51
+ * @LastEditTime: 2020-11-03 08:31:30
  * @LastEditors: Please set LastEditors
- * @Description: In User Settings Edit
+ * @Description: 声明项目中的路由跳转信息
  * @FilePath: \my-vuepro\src\router\index.js
  */
 import Vue from 'vue';
